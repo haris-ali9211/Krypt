@@ -1,21 +1,25 @@
 
-const main = async () => {
+const hre = require("hardhat");
 
-  const Transaction = await hre.ethers.getContractFactory("Transaction");
-  const transaction = await Transaction.deploy();
+const main = async() => {
 
-  await transaction.deployed();
+  const Transactions = await hre.ethers.getContractFactory("Transactions");
+  const transactions = await Transactions.deploy();
 
-  console.log("Transaction deployed to:", transaction.address);
+  await transactions.deployed();
+
+  console.log("Transactions deployed to:", transactions.address);
 }
 
-const runMin = async () => {
-  try {
-    await main();
-    process.exit(0);
-  } catch (error) {
-    console.log("🚀 ~ file: deploy.js ~ line 17 ~ runMin ~ error", error);
-    process.exit(1);
-  }
+  const runMain = async () => {
+    try{
+      await main();
+        process.exit(0);
+    }catch(error) {
+      console.error(error)
+      process.exit(1);
+    }
 }
-runMin();
+
+runMain();
+

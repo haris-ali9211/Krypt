@@ -6,3 +6,7 @@ import { contractABI, contractAddress } from "../utils/constants";
 export const TransactionContext = React.createContext();
 
 const { ethereum } = window;
+
+const getEthereumContract = ()=>{
+    const provider = new ether
+}

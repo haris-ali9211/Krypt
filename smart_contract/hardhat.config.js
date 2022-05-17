@@ -1,16 +1,13 @@
-//https://eth-ropsten.alchemyapi.io/v2/I_frik69ASKBveasYTDmmLwHjcu76RgW
-
 
 
 require('@nomiclabs/hardhat-waffle');
 
 module.exports = {
-  solidity: '0.8.0',
-  networks:{
-    ropsten:{
-      url:'https://eth-ropsten.alchemyapi.io/v2/I_frik69ASKBveasYTDmmLwHjcu76RgW',
-      // accounts:['1546798328703c9053dbe206f104f215b54c7b5e16fd61fecd53415b808f9e03']
-      accounts:['b7cc50d93b741feeb1891864c03af6a007ecfaf0b074dd012be825e70c37d6ab']
+  solidity : '0.8.0', // solidity version of smart contract
+  networks : {
+    ropsten : {
+      url :"https://eth-ropsten.alchemyapi.io/v2/Mn1o4wfYENOBFm3nnicuRZrk9yaBK_xA", // alchemy url for the deployment of smart contract
+      accounts : ['5891b493c71e777c3d64d82695e379e4738600dfcbce1dc272c6c08e3f094c35'] //private key
     }
   }
 }
